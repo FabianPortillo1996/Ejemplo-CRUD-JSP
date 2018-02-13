@@ -1,0 +1,18 @@
+SMAP
+vistaPersona_jsp.java
+JSP
+*S JSP
+*F
++ 0 vistaPersona.jsp
+vistaPersona.jsp
+*L
+5,14:47
+19,3:62
+21,32:65
+53,3:98
+55,2:101
+57,4:103,3
+61,2:115
+62,2:117
+63,6:119
+*E
