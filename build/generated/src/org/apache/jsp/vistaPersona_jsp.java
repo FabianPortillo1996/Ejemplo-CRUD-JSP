@@ -54,9 +54,11 @@ public final class vistaPersona_jsp extends org.apache.jasper.runtime.HttpJspBas
       out.write("<html>\n");
       out.write("    <head>\n");
       out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n");
+      out.write("        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"/>\n");
+      out.write("        <link rel=\"stylesheet\" type=\"text/css\" href=\"css/main.css\" />\n");
       out.write("        <title>Persona</title>\n");
       out.write("    </head>\n");
-      out.write("    \n");
+      out.write("\n");
       out.write("    ");
 
         DAOPersona dao = new DAOPersona();
@@ -64,62 +66,68 @@ public final class vistaPersona_jsp extends org.apache.jasper.runtime.HttpJspBas
     
       out.write("\n");
       out.write("    <body>\n");
-      out.write("        <form  name=\"formPersona\" method=\"POST\" action=\"SERVPersona\" />\n");
-      out.write("        <div class=\"form-item\">\n");
-      out.write("            <label>ID persona: </label><input type=\"number\" name=\"id\" />\n");
-      out.write("        </div>\n");
-      out.write("        <div class=\"form-item\">\n");
-      out.write("            <label>Nombres: </label><input type=\"text\" name=\"nombre\" />\n");
-      out.write("        </div>  \n");
-      out.write("        <div class=\"form-item\">\n");
-      out.write("            <label>Apellidos: </label><input type=\"text\" name=\"apellidos\" />\n");
-      out.write("        </div> \n");
-      out.write("        <div class=\"form-item\">\n");
-      out.write("            <label>Edad: </label><input type=\"number\" name=\"edad\" min=\"0\" />\n");
-      out.write("        </div> \n");
-      out.write("        <div class=\"form-control\">\n");
-      out.write("            <input type=\"submit\" name=\"btnAceptar\" value=\"Insertar\" />\n");
-      out.write("            <input type=\"submit\" name=\"btnModificar\" value=\"Modificar\" />\n");
-      out.write("            <input type=\"submit\" name=\"btnEliminar\" value=\"Eliminar\" />\n");
-      out.write("        </div>\n");
-      out.write("    </form>\n");
-      out.write("        <table>\n");
-      out.write("            <thead>\n");
-      out.write("                <tr>\n");
-      out.write("                    <th>ID</th>\n");
-      out.write("                    <th>Nombre</th>\n");
-      out.write("                    <th>Apellido</th>\n");
-      out.write("                    <th>Edad</th>\n");
-      out.write("                </tr>\n");
-      out.write("            </thead>\n");
-      out.write("            <tbody>\n");
-      out.write("                ");
+      out.write("        <div class=\"container\">\n");
+      out.write("            <div class=\"container-form\">\n");
+      out.write("                <form  name=\"formPersona\" method=\"POST\" action=\"SERVPersona\" />\n");
+      out.write("                <div class=\"form-item\">\n");
+      out.write("                    <label>ID persona: </label><input type=\"number\" name=\"id\" />\n");
+      out.write("                </div>\n");
+      out.write("                <div class=\"form-item\">\n");
+      out.write("                    <label>Nombres: </label><input type=\"text\" name=\"nombre\" />\n");
+      out.write("                </div>  \n");
+      out.write("                <div class=\"form-item\">\n");
+      out.write("                    <label>Apellidos: </label><input type=\"text\" name=\"apellidos\" />\n");
+      out.write("                </div> \n");
+      out.write("                <div class=\"form-item\">\n");
+      out.write("                    <label>Edad: </label><input type=\"number\" name=\"edad\" min=\"0\" />\n");
+      out.write("                </div> \n");
+      out.write("                <div class=\"form-control\">\n");
+      out.write("                    <input type=\"submit\" name=\"btnInsertar\" value=\"Insertar\" />\n");
+      out.write("                    <input type=\"submit\" name=\"btnModificar\" value=\"Modificar\" />\n");
+      out.write("                    <input type=\"submit\" name=\"btnEliminar\" value=\"Eliminar\" />\n");
+      out.write("                </div>\n");
+      out.write("                </form>  \n");
+      out.write("            </div>\n");
+      out.write("            <div class=\"container-table\">\n");
+      out.write("                <table>\n");
+      out.write("                    <thead>\n");
+      out.write("                        <tr>\n");
+      out.write("                            <th>ID</th>\n");
+      out.write("                            <th>Nombre</th>\n");
+      out.write("                            <th>Apellido</th>\n");
+      out.write("                            <th>Edad</th>\n");
+      out.write("                        </tr>\n");
+      out.write("                    </thead>\n");
+      out.write("                    <tbody>\n");
+      out.write("                        ");
 
-                    datos = dao.consultar();
-                    for(Persona p : datos){     
-                 
+                            datos = dao.consultar();
+                            for (Persona p : datos) {
+                        
       out.write("\n");
-      out.write("                 <tr>\n");
-      out.write("                     <td>");
-      out.print( p.getId() );
+      out.write("                        <tr>\n");
+      out.write("                            <td>");
+      out.print( p.getId());
       out.write("</td>\n");
-      out.write("                    <td>");
-      out.print(  p.getNombres() );
+      out.write("                            <td>");
+      out.print(  p.getNombres());
       out.write("</td>\n");
-      out.write("                    <td>");
-      out.print(  p.getApellidos() );
+      out.write("                            <td>");
+      out.print(  p.getApellidos());
       out.write("</td>\n");
-      out.write("                    <td>");
-      out.print(  p.getEdad() );
+      out.write("                            <td>");
+      out.print(  p.getEdad());
       out.write("</td>\n");
-      out.write("                </tr>  \n");
-      out.write("                ");
+      out.write("                        </tr>  \n");
+      out.write("                        ");
  }
-                
+                        
       out.write("\n");
-      out.write("            </tbody>\n");
-      out.write("        </table>\n");
-      out.write("</body>\n");
+      out.write("                    </tbody>\n");
+      out.write("                </table>  \n");
+      out.write("            </div>\n");
+      out.write("        </div>\n");
+      out.write("    </body>\n");
       out.write("</html>\n");
     } catch (Throwable t) {
       if (!(t instanceof SkipPageException)){

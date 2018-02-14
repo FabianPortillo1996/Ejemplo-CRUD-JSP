@@ -9,7 +9,7 @@ import uml.Persona;
  * @author Fabian
  */
 public class DAOPersona implements Operaciones {
-    
+ 
     Database bd = new Database();
     
     @Override
