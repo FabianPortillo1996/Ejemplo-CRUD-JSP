@@ -70,7 +70,7 @@ public class DAOPersona implements Operaciones {
         Persona p = (Persona) obj;
         Connection conn;
         PreparedStatement pst;
-        String sql = "update persona set nombres=?, apellido=?, edad=? where id=?";
+        String sql = "update persona set nombres=?, apellidos=?, edad=? where id=?";
         String respuesta = "";
         try {
             Class.forName(bd.getDriver());

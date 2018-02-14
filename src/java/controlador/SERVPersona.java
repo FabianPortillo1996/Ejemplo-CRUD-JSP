@@ -63,6 +63,7 @@ public class SERVPersona extends HttpServlet {
                     p.setEdad(Integer.parseInt(request.getParameter("edad")));
 
                     respuesta = dao.modificar(p);
+                    System.out.println("Hola " + respuesta);
                     request.setAttribute("Respuesta", respuesta);
                    
                 }else if(request.getParameter("btnEliminar") != null){
