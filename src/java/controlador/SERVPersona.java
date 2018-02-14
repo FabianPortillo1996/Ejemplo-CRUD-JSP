@@ -65,7 +65,7 @@ public class SERVPersona extends HttpServlet {
                     respuesta = dao.modificar(p);
                     request.setAttribute("Respuesta", respuesta);
                    
-                }else if(request.getParameter("btnModificar") != null){
+                }else if(request.getParameter("btnEliminar") != null){
                     p.setId(Integer.parseInt(request.getParameter("id")));
                     dao.eliminar(p);
                 }
